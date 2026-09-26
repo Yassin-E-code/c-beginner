@@ -23,5 +23,14 @@ int main() {
     char str2[] = "World";
     int comparison = strcmp(str1, str2);
     printf("Comparison result: %d\n", comparison);
+    // Concatenate strings using strcat function
+    char str3[20] = "Hello, ";
+    strcat(str3, "World!");
+    printf("Concatenated string: %s\n", str3);
+    // Copy strings using strcpy function
+    char str4[20];
+    strcpy(str4, "Hello, World!");
+    printf("Copied string: %s\n", str4);
+    // Note: When working with strings in C, it's important to ensure that the character arrays have enough space to accommodate the string data, including the null terminator. Additionally, be cautious when using functions like strcat and strcpy to avoid buffer overflows.
     return 0;
 }
