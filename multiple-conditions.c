@@ -9,6 +9,6 @@ int main (){
         printf("You are not eligible to work.\n");
     }
 
-
+// ...
 return 0;
 }
