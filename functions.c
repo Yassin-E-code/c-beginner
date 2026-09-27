@@ -9,6 +9,7 @@ void moo() {
     printf("this is a void function");
     //this function have no return it just prints a message ,so we dont need a variable when we call it in the main code.
 }
+//the main function is the entry point of the program where execution begins. It can call other functions and manage the flow of the program.
 #include<stdio.h>
 int main (){
     //here we call the add function and pass two integers as arguments to get their sum
