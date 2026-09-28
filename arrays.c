@@ -1,5 +1,6 @@
 #include <stdio.h>
 int main(){
+    // basicly an array is a collection of variables of the same type that are stored in contiguous memory locations. In C, arrays are declared by specifying the type of the elements and the number of elements in square brackets. For example, to declare an array of integers with a size of 10, we can use the following syntax:
     // declaring an array of integers with a size of 10
     int numbers[10];
 
