@@ -12,6 +12,7 @@ void moo() {
 //the main function is the entry point of the program where execution begins. It can call other functions and manage the flow of the program.
 #include<stdio.h>
 int main (){
+    // basic example of using functions in C
     //here we call the add function and pass two integers as arguments to get their sum
     int result = add(5, 3);
     printf("The sum is: %d\n", result);
