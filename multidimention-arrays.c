@@ -15,6 +15,7 @@ int main() {
         printf("\n");
         // print a new line after each row to format the output nicely
     }
+    // In C, multidimensional arrays are essentially arrays of arrays. The first index represents the row, and the second index represents the column. This allows for the storage and manipulation of data in a tabular format, making it useful for various applications such as matrices, grids, and more complex data structures.
 
     return 0;
 }
