@@ -10,5 +10,11 @@ int main() {
     if (0) {
         printf("Hello, World! ,false\n");
     }
+    // the else statement is used to specify a block of code that will be executed if the condition in the if statement is false
+    if (0) {
+        printf("Hello, World! ,false\n");
+    } else {
+        printf("Hello, World! ,true\n");
+    }
 
     return 0;
