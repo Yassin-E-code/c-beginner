@@ -10,10 +10,7 @@
 */
 
 int main() {
-
-    // ---------------------------------------------------------------
     // INSTRUCTION 1: Storing an address in a pointer
-    // ---------------------------------------------------------------
     int x = 10;           // Standard variable holding the value 10
     int *ptr = &x;        // 'ptr' stores the memory address of 'x'
 
@@ -22,18 +19,17 @@ int main() {
     printf("Value of x via pointer (*ptr): %d\n", *ptr);
 
 
-    // ---------------------------------------------------------------
+    
     // INSTRUCTION 2: Modifying values indirectly
-    // ---------------------------------------------------------------
     // Changing *ptr modifies the value inside 'x' directly at its memory address.
     *ptr = 25; 
 
     printf("New value of x after updating *ptr: %d\n", x);
 
 
-    // ---------------------------------------------------------------
+    
     // INSTRUCTION 3: String literals as char pointers
-    // ---------------------------------------------------------------
+    
     // "Hello" is stored somewhere in memory; 'msg' holds the address of 'H'.
     char *msg = "Hello"; 
 
@@ -41,9 +37,9 @@ int main() {
     printf("First character pointed to: %c\n", *msg); // Dereferencing gives 'H'
 
 
-    // ---------------------------------------------------------------
+    
     // INSTRUCTION 4: Pass-by-reference using pointers
-    // ---------------------------------------------------------------
+    
     // Pointers allow functions to modify variables created outside their scope.
     int score = 50;
     
