@@ -7,6 +7,8 @@ int main() {
 
     // Increment the static variable
     count+= 5;
+    count+= 5;
+    count++;
 
     // Print the value of the static variable
     printf("Count: %d\n", count);
