@@ -10,7 +10,9 @@ enum day {
         saturday
     };
 int main (){
-    
+    // lets test it 
+     enum day x = friday;
+     printf("day number is  %d\n",x);
     
     return 0;
 }
