@@ -8,6 +8,15 @@ int main (){
     } else {
         printf("You are not eligible to work.\n");
     }
+    int number = 10;
+//we want to check if the number is positive and even
+if (number>0 && number%2==0) {
+    printf("The number is positive and even.\n");
+} else {
+    printf("The number is either negative or odd.\n");
+}
+
+
 
 // ...
 return 0;
