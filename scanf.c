@@ -6,5 +6,10 @@ int main () {
     printf("Enter a number: ");
     scanf("%d", &num);
     printf("You entered: %d\n", num);
+    //we can also use scanf to read multiple values at once, for example we can read two numbers and store them in two variables
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("You entered: %d and %d\n", num1, num2);
     return 0;
 }
