@@ -10,6 +10,7 @@ int main() {
     if (0) {
         printf("Hello, World! ,false\n");
     }
-
+    printf("this is a test ,true\n");
+    
     return 0;
 }
