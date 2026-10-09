@@ -49,6 +49,15 @@ int main() {
     printf("Updated score: %d\n", score);
     //pointer arithmetic
     int arr[5] = {1, 2, 3, 4, 5};
+    scanf("%d", &arr[0]); // Read first element of the array
+    scanf("%d", &arr[1]); // Read second element of the array   
+    scanf("%d", &arr[2]); // Read third element of the array
+    scanf("%d", &arr[3]); // Read fourth element of the array
+    scanf("%d", &arr[4]); // Read fifth element of the array
+//we can use a for loop to iterate through the array and print its elements using pointer arithmetic
+    for (int i = 0; i < 5; i++) {
+        printf("Element %d: %d\n", i, *(arr + i)); // Accessing elements using pointer arithmetic
+    }
     int *arr_ptr = arr; // Points to the first element of the array 
     printf("First element: %d\n", *arr_ptr);
     printf("Second element using pointer arithmetic: %d\n", *(arr_ptr + 1)); // Accessing second element
