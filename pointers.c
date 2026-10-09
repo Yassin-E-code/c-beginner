@@ -51,10 +51,7 @@ int main() {
     int arr[5] = {1, 2, 3, 4, 5};
     int *arr_ptr = arr; // Points to the first element of the array 
     printf("First element: %d\n", *arr_ptr);
-    printf("Second element: %d\n", *(arr_ptr + 1));
-    printf("Third element: %d\n", *(arr_ptr + 2));
-    printf("Fourth element: %d\n", *(arr_ptr + 3));
-    printf("Fifth element: %d\n", *(arr_ptr + 4));
+    
 
     return 0;
 }
