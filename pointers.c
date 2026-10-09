@@ -51,6 +51,7 @@ int main() {
     int arr[5] = {1, 2, 3, 4, 5};
     int *arr_ptr = arr; // Points to the first element of the array 
     printf("First element: %d\n", *arr_ptr);
+    printf("Second element using pointer arithmetic: %d\n", *(arr_ptr + 1)); // Accessing second element
     
 
     return 0;
