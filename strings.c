@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<string.h>
+
 //strings are arrays of characters in C, and they are used to store and manipulate text data. In C, strings are represented as arrays of characters terminated by a null character ('\0'). The null character indicates the end of the string, allowing functions to determine where the string ends.
 int main() {
     // Declare and initialize a string
