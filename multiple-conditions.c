@@ -15,9 +15,20 @@ if (number>0 && number%2==0) {
 } else {
     printf("The number is either negative or odd.\n");
 }
+// multiple conditions case "triple" we check if the number is positive,negative or null
+int number ;
+printf("Enter a number: ");
+scanf("%d", &number);
+if (number > 0) {
+    printf("The number is positive.\n");
+} else if (number < 0) {
+    printf("The number is negative.\n");
+} else {
+    printf("The number is zero.\n");
+}
+// each condition is checked in order, and the first true condition will execute its corresponding block of code. If none of the conditions are true, the else block will execute.
 
 
 
-// ...
 return 0;
 }
