@@ -1,6 +1,6 @@
 #include <stdio.h>
 // first we have the looping methode wich is easy to think about , but with n complexity wich is also a bad thing to our programme so we use recursion as a solution 
-
+// the main idea is to fined the base case and the repetive one so u can build a code that runs faster , consumes less memorey and easy to read and understand .
 int factoriel(int a ){
     if (a == 0 || a == 1) {
         return 1;
@@ -33,6 +33,6 @@ int main() {
     printf("the factoriel of %d is : %d\n",num,result2);
     printf("the factoriel of %d is : %d\n",num,result);
     //testing to see if the two functions give the same result.
-    
+
     return 0;
 }
