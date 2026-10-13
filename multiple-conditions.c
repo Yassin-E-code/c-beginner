@@ -16,12 +16,12 @@ if (number>0 && number%2==0) {
     printf("The number is either negative or odd.\n");
 }
 // multiple conditions case "triple" we check if the number is positive,negative or null
-int number ;
+int num ;
 printf("Enter a number: ");
-scanf("%d", &number);
-if (number > 0) {
+scanf("%d", &num);
+if (num > 0) {
     printf("The number is positive.\n");
-} else if (number < 0) {
+} else if (num < 0) {
     printf("The number is negative.\n");
 } else {
     printf("The number is zero.\n");
