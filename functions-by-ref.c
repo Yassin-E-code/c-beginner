@@ -1,5 +1,5 @@
 #include <stdio.h>
-// a void function to swap to variables using pointers. This function takes two integer pointers as parameters and swaps the values they point to. The use of pointers allows the function to modify the original variables in the calling function, demonstrating the concept of passing by reference in C.
+// a void function to swap two variables using pointers. This function takes two integer pointers as parameters and swaps the values they point to. The use of pointers allows the function to modify the original variables in the calling function, demonstrating the concept of passing by reference in C.
 
 void swap(int *a, int *b) {
     int temp = *a;
