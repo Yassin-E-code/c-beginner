@@ -10,12 +10,14 @@ typedef struct {
 typedef struct {
     node* head ;
 }list ;
+// Function to create a new node with the given value
 node* createNode(int value) {
     node* newNode = (node*)malloc(sizeof(node));
     newNode->data = value;
     newNode->next = NULL;
     return newNode;
 }
+// Function to create a new list
 list* createList() {
     list* newList = (list*)malloc(sizeof(list));
     newList->head = NULL;
