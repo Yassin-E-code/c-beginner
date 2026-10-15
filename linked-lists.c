@@ -32,4 +32,28 @@ list* addNode(list* myList, int value) {
     }
     return myList;
 }
+int main() {
+    list* myList = createList();
+    myList = addNode(myList, 10);
+    myList = addNode(myList, 20);
+    myList = addNode(myList, 30);
+    
+    node* current = myList->head;
+    while (current != NULL) {
+        printf("%d -> ", current->data);
+        current = current->next;
+    }
+    printf("NULL\n");
+    
+    // Free the allocated memory
+    current = myList->head;
+    while (current != NULL) {
+        node* temp = current;
+        current = current->next;
+        free(temp);
+    }
+    free(myList);
+    
+    return 0;
+}
 
