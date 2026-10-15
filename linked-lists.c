@@ -23,6 +23,7 @@ list* createList() {
     newList->head = NULL;
     return newList;
 }
+// Function to add a new node with the given value to the end of the list
 list* addNode(list* myList, int value) {
     node* newNode = createNode(value);
     if (myList->head == NULL) {
@@ -36,6 +37,16 @@ list* addNode(list* myList, int value) {
     }
     return myList;
 }
+// Function to print the list
+void printList(list* myList) {
+    node* current = myList->head;
+    while (current != NULL) {
+        printf("%d -> ", current->data);
+        current = current->next;
+    }
+    printf("NULL\n");
+}
+// Main function to demonstrate the linked list operations
 int main() {
     list* myList = createList();
     myList = addNode(myList, 10);
