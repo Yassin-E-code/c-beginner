@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 // lets define our node structure
+// A node structure that contains an integer data and a pointer to the next node
 typedef struct {
     int data ;
     struct node* next ;
 }node;
+// A list structure that contains a pointer to the head node
 typedef struct {
     node* head ;
 }list ;
