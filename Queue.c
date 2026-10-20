@@ -18,3 +18,14 @@ Node* createNode(int value) {
     newNode->next = NULL;
     return newNode;
 }
+// Function to initialize a new queue
+Queue* createQueue() {
+    Queue* queue = (Queue*)malloc(sizeof(Queue));
+    queue->front = NULL;
+    queue->rear = NULL;
+    return queue;
+}
+// Function to check if the queue is empty
+int isEmpty(Queue* queue) {
+    return (queue->front == NULL);
+}
