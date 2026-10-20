@@ -29,3 +29,14 @@ Queue* createQueue() {
 int isEmpty(Queue* queue) {
     return (queue->front == NULL);
 }
+// Function to add an element to the rear of the queue
+void enqueue(Queue* queue, int value) {
+    Node* newNode = createNode(value);
+    if (isEmpty(queue)) {
+        queue->front = newNode;
+        queue->rear = newNode;
+    } else {
+        queue->rear->next = newNode;
+        queue->rear = newNode;
+    }
+}
