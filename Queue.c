@@ -40,3 +40,18 @@ void enqueue(Queue* queue, int value) {
         queue->rear = newNode;
     }
 }
+// Function to remove and return the front element of the queue
+int dequeue(Queue* queue) {
+    if (isEmpty(queue)) {
+        printf("Queue is empty. Cannot dequeue.\n");
+        return -1; // Return an error value
+    }
+    Node* temp = queue->front;
+    int value = temp->data;
+    queue->front = queue->front->next;
+    free(temp);
+    if (queue->front == NULL) {
+        queue->rear = NULL; // If the queue is now empty, set rear to NULL
+    }
+    return value;
+}
