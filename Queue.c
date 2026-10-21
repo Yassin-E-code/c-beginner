@@ -55,3 +55,11 @@ int dequeue(Queue* queue) {
     }
     return value;
 }
+// Function to get the front element of the queue without removing it
+int peek(Queue* queue) {
+    if (isEmpty(queue)) {
+        printf("Queue is empty. Cannot peek.\n");
+        return -1; // Return an error value
+    }
+    return queue->front->data;
+}
