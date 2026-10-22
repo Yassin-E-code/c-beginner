@@ -63,3 +63,22 @@ int peek(Queue* queue) {
     }
     return queue->front->data;
 }
+//Function to free the memory allocated for the queue
+void freeQueue(Queue* queue) {
+    while (!isEmpty(queue)) {
+        dequeue(queue);
+    }
+    free(queue);
+}
+// main function to test all of th the programme and its functions 
+int main() {
+    Queue* queue = createQueue();
+    enqueue(queue, 10);
+    enqueue(queue, 20);
+    enqueue(queue, 30);
+    printf("Front element: %d\n", peek(queue));
+    printf("Dequeued: %d\n", dequeue(queue));
+    printf("Front element after dequeue: %d\n", peek(queue));
+    freeQueue(queue);
+    return 0;
+}
