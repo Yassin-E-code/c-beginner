@@ -7,4 +7,12 @@ typedef struct {
 typedef struct {
     node* top ;
 }stack;
+node* create_node (int value){
+    node* newnode= malloc(sizeof(node));
+    newnode->next =NULL;
+    newnode->data =value ;
+
+return newnode ;
+}
+
 
