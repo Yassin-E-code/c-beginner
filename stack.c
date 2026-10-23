@@ -7,12 +7,19 @@ typedef struct {
 typedef struct {
     node* top ;
 }stack;
+// function to create a new node
 node* create_node (int value){
     node* newnode= malloc(sizeof(node));
     newnode->next =NULL;
     newnode->data =value ;
 
 return newnode ;
+}
+// function to create a new stack
+stack* create_stack(){
+    stack* newstack = malloc(sizeof(stack));
+    newstack->top = NULL ;
+    return newstack ;
 }
 
 
