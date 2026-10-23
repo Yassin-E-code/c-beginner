@@ -21,5 +21,9 @@ stack* create_stack(){
     newstack->top = NULL ;
     return newstack ;
 }
+// function to check if the stack is empty
+int is_empty(stack* s){
+    return s->top == NULL ;
+}
 
 
