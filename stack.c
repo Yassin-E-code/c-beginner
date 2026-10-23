@@ -25,5 +25,11 @@ stack* create_stack(){
 int is_empty(stack* s){
     return s->top == NULL ;
 }
+// function to push an element onto the stack
+void push(stack* s, int value){
+    node* newnode = create_node(value);
+    newnode->next = s->top ;
+    s->top = newnode ;
+}
 
 
