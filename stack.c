@@ -31,5 +31,25 @@ void push(stack* s, int value){
     newnode->next = s->top ;
     s->top = newnode ;
 }
+// function to pop an element from the stack
+int pop(stack* s){
+    if (is_empty(s)){
+        printf("Stack is empty\n");
+        return -1 ;
+    }
+    node* temp = s->top ;
+    int value = temp->data ;
+    s->top = s->top->next ;
+    free(temp);
+    return value ;
+}
+// function to peek at the top element of the stack
+int peek(stack* s){
+    if (is_empty(s)){
+        printf("Stack is empty\n");
+        return -1 ;
+    }
+    return s->top->data ;
+}
 
 
