@@ -67,4 +67,16 @@ void print_stack(stack* s){
     }
     printf("\n");
 }
+int main(){
+    stack* s = create_stack();
+    push(s, 1);
+    push(s, 2);
+    push(s, 3);
+    print_stack(s);
+    printf("Top element: %d\n", peek(s));
+    printf("Popped element: %d\n", pop(s));
+    print_stack(s);
+    free_stack(s);
+    return 0;
+}
 
