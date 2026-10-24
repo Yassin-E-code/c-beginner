@@ -51,5 +51,12 @@ int peek(stack* s){
     }
     return s->top->data ;
 }
+// function to free the stack
+void free_stack(stack* s){  
+    while (!is_empty(s)){
+        pop(s);
+    }
+    free(s);
+}
 
 
