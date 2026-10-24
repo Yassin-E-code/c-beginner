@@ -58,5 +58,13 @@ void free_stack(stack* s){
     }
     free(s);
 }
-
+// function to print the stack
+void print_stack(stack* s){
+    node* current = s->top ;
+    while (current != NULL){
+        printf("%d ", current->data);
+        current = current->next ;
+    }
+    printf("\n");
+}
 
