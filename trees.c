@@ -18,3 +18,4 @@ Node* createNode(int data) {
     newNode->right = NULL;
     return newNode;
 }
+// Function to insert a new node with the given data into the binary tree
