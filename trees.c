@@ -9,5 +9,4 @@ typedef struct  {
 // define a tree structure that contains a pointer to the root node of the tree
 typedef struct  {
     Node* root;
-} Tree;
-// Function to create a new node with given data
+} Tree ;
