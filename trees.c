@@ -18,3 +18,26 @@ Node* createNode(int data) {
     newNode->right = NULL;
     return newNode;
 }
+// Function to insert a new node with the given data into the binary tree
+void insertNode(Tree* tree, int data) { 
+    Node* newNode = createNode(data);
+    if (tree->root == NULL) {
+        tree->root = newNode;
+    } else {
+        Node* current = tree->root;
+        Node* parent = NULL;
+        while (current != NULL) {
+            parent = current;
+            if (data < current->data) {
+                current = current->left;
+            } else {
+                current = current->right;
+            }
+        }
+        if (data < parent->data) {
+            parent->left = newNode;
+        } else {
+            parent->right = newNode;
+        }
+    }
+}
