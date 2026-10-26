@@ -10,3 +10,11 @@ typedef struct  {
 typedef struct  {
     Node* root;
 } Tree ;
+// Function to create a new node with the given data
+Node* createNode(int data) {
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    newNode->data = data;
+    newNode->left = NULL;
+    newNode->right = NULL;
+    return newNode;
+}
