@@ -41,3 +41,11 @@ void insertNode(Tree* tree, int data) {
         }
     }
 }
+// Function to perform an in-order traversal of the binary tree
+void inOrderTraversal(Node* node) {
+    if (node != NULL) {
+        inOrderTraversal(node->left);
+        printf("%d ", node->data);
+        inOrderTraversal(node->right);
+    }
+}
