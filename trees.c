@@ -49,3 +49,11 @@ void inOrderTraversal(Node* node) {
         inOrderTraversal(node->right);
     }
 }
+// Function to free the memory allocated for the binary tree
+void freeTree(Node* node) { 
+    if (node != NULL) {
+        freeTree(node->left);
+        freeTree(node->right);
+        free(node);
+    }
+}
