@@ -12,3 +12,9 @@ typedef struct  {
 } Graph;
 // node **  reference to an array of pointers to nodes, which represents the adjacency list of the graph. Each element of the array corresponds to a node in the graph, and the linked list of nodes represents the edges connected to that node.
 // Function to create a new node with the given data
+Node* createNode(int data) {
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
