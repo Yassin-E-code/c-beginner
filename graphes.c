@@ -18,3 +18,13 @@ Node* createNode(int data) {
     newNode->next = NULL;
     return newNode;
 }
+// Function to create a new graph with the given number of nodes
+Graph* createGraph(int numNodes) {
+    Graph* graph = (Graph*)malloc(sizeof(Graph));
+    graph->numNodes = numNodes;
+    graph->nodes = (Node**)malloc(numNodes * sizeof(Node*));
+    for (int i = 0; i < numNodes; i++) {
+        graph->nodes[i] = NULL;
+    }
+    return graph;
+}
