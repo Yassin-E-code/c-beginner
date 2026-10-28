@@ -57,3 +57,27 @@ void freeTree(Node* node) {
         free(node);
     }
 }
+// Main function to demonstrate the binary tree implementation
+int main() {
+    Tree tree;
+    tree.root = NULL;
+
+    // Insert nodes into the binary tree
+    insertNode(&tree, 5);
+    insertNode(&tree, 3);
+    insertNode(&tree, 7);
+    insertNode(&tree, 2);
+    insertNode(&tree, 4);
+    insertNode(&tree, 6);
+    insertNode(&tree, 8);
+
+    // Perform in-order traversal of the binary tree
+    printf("In-order traversal: ");
+    inOrderTraversal(tree.root);
+    printf("\n");
+
+    // Free the memory allocated for the binary tree
+    freeTree(tree.root);
+
+    return 0;
+}
