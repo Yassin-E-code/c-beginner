@@ -34,3 +34,15 @@ void addEdge(Graph* graph, int src, int dest) {
     newNode->next = graph->nodes[src];
     graph->nodes[src] = newNode;
 }
+// Function to print the graph
+void printGraph(Graph* graph) {
+    for (int i = 0; i < graph->numNodes; i++) {
+        Node* temp = graph->nodes[i];
+        printf("Node %d: ", i);
+        while (temp) {
+            printf("%d -> ", temp->data);
+            temp = temp->next;
+        }
+        printf("NULL\n");
+    }
+}
