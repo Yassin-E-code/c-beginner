@@ -28,3 +28,9 @@ Graph* createGraph(int numNodes) {
     }
     return graph;
 }
+// Function to add an edge between two nodes in the graph
+void addEdge(Graph* graph, int src, int dest) {
+    Node* newNode = createNode(dest);
+    newNode->next = graph->nodes[src];
+    graph->nodes[src] = newNode;
+}
