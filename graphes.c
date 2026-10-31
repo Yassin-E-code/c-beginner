@@ -46,3 +46,16 @@ void printGraph(Graph* graph) {
         printf("NULL\n");
     }
 }
+// Function to free the memory allocated for the graph
+void freeGraph(Graph* graph) {      
+    for (int i = 0; i < graph->numNodes; i++) {
+        Node* temp = graph->nodes[i];
+        while (temp) {
+            Node* toFree = temp;
+            temp = temp->next;
+            free(toFree);
+        }
+    }
+    free(graph->nodes);
+    free(graph);
+}
