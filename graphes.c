@@ -80,4 +80,24 @@ int edgeExists(Graph* graph, int src, int dest) {
     }
     return 0; // Edge does not exist
 }
-
+// Function to remove an edge between two nodes in the graph
+void removeEdge(Graph* graph, int src, int dest) {
+    if (!nodeExists(graph, src) || !nodeExists(graph, dest)) {
+        return; // One or both nodes do not exist
+    }
+    Node* temp = graph->nodes[src];
+    Node* prev = NULL;
+    while (temp) {
+        if (temp->data == dest) {
+            if (prev) {
+                prev->next = temp->next;
+            } else {
+                graph->nodes[src] = temp->next;
+            }
+            free(temp);
+            return; // Edge removed
+        }
+        prev = temp;
+        temp = temp->next;
+    }
+}
