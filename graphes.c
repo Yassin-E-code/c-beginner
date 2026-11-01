@@ -66,4 +66,18 @@ int nodeExists(Graph* graph, int node) {
     }
     return 1; // Node exists
 }
+// Function to check if an edge exists between two nodes in the graph
+int edgeExists(Graph* graph, int src, int dest) {
+    if (!nodeExists(graph, src) || !nodeExists(graph, dest)) {
+        return 0; // One or both nodes do not exist
+    }
+    Node* temp = graph->nodes[src];
+    while (temp) {
+        if (temp->data == dest) {
+            return 1; // Edge exists
+        }
+        temp = temp->next;
+    }
+    return 0; // Edge does not exist
+}
 
