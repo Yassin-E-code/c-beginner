@@ -101,3 +101,22 @@ void removeEdge(Graph* graph, int src, int dest) {
         temp = temp->next;
     }
 }
+//function to remove a node from the graph
+void removeNode(Graph* graph, int node) {   
+    if (!nodeExists(graph, node)) {
+        return; // Node does not exist
+    }
+    // Remove all edges to this node
+    for (int i = 0; i < graph->numNodes; i++) {
+        removeEdge(graph, i, node);
+    }
+    // Free the linked list of edges for this node
+    Node* temp = graph->nodes[node];
+    while (temp) {
+        Node* toFree = temp;
+        temp = temp->next;
+        free(toFree);
+    }
+    graph->nodes[node] = NULL; // Set the node's adjacency list to NULL
+}
+
