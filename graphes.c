@@ -119,4 +119,16 @@ void removeNode(Graph* graph, int node) {
     }
     graph->nodes[node] = NULL; // Set the node's adjacency list to NULL
 }
-
+// function to get the degree of a node in the graph
+int getDegree(Graph* graph, int node) {
+    if (!nodeExists(graph, node)) {
+        return -1; // Node does not exist
+    }
+    int degree = 0;
+    Node* temp = graph->nodes[node];
+    while (temp) {
+        degree++;
+        temp = temp->next;
+    }
+    return degree;
+}
