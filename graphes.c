@@ -132,3 +132,19 @@ int getDegree(Graph* graph, int node) {
     }
     return degree;
 }
+// Function to get the neighbors of a node in the graph
+int* getNeighbors(Graph* graph, int node, int* numNeighbors) {
+    if (!nodeExists(graph, node)) {
+        *numNeighbors = 0; // Node does not exist
+        return NULL;
+    }
+    int degree = getDegree(graph, node);
+    *numNeighbors = degree;
+    int* neighbors = (int*)malloc(degree * sizeof(int));
+    Node* temp = graph->nodes[node];
+    for (int i = 0; i < degree; i++) {
+        neighbors[i] = temp->data;
+        temp = temp->next;
+    }
+    return neighbors;
+}
