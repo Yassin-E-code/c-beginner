@@ -148,3 +148,39 @@ int* getNeighbors(Graph* graph, int node, int* numNeighbors) {
     }
     return neighbors;
 }
+int main() {
+    // Create a graph with 5 nodes
+    Graph* graph = createGraph(5);
+    // Add edges to the graph
+    addEdge(graph, 0, 1);
+    addEdge(graph, 0, 4);
+    addEdge(graph, 1, 2);
+    addEdge(graph, 1, 3);
+    addEdge(graph, 1, 4);
+    addEdge(graph, 2, 3);
+    addEdge(graph, 3, 4);
+    // Print the graph
+    printGraph(graph);
+    // Check if an edge exists
+    printf("Edge between 1 and 4 exists: %d\n", edgeExists(graph, 1, 4));
+    // Remove an edge
+    removeEdge(graph, 1, 4);
+    printf("After removing edge between 1 and 4:\n");
+    printGraph(graph);
+    // Get the degree of a node
+    printf("Degree of node 1: %d\n", getDegree(graph, 1));
+    // Get the neighbors of a node
+    int numNeighbors;
+    int* neighbors = getNeighbors(graph, 1, &numNeighbors);
+    printf("Neighbors of node 1: ");
+    for (int i = 0; i < numNeighbors; i++) {
+        printf("%d ", neighbors[i]);
+    }
+    printf("\n");
+    free(neighbors); // Free the allocated memory for neighbors
+    // Remove a node
+    removeNode(graph, 3);
+    printf("After removing node 3:\n");
+    printGraph(graph);
+    // Free the graph memory
+    freeGraph(graph);
