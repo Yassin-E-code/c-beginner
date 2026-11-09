@@ -70,6 +70,20 @@ void freeQueue(Queue* queue) {
     }
     free(queue);
 }
+// function to print the elements of the queue
+void printQueue(Queue* queue) {
+    if (isEmpty(queue)) {
+        printf("Queue is empty.\n");
+        return;
+    }
+    printf("Queue elements: ");
+    Node* current = queue->front;
+    while (current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+    printf("\n");
+}
 // main function to test all of th the programme and its functions 
 int main() {
     Queue* queue = createQueue();
