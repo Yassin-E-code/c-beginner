@@ -23,11 +23,19 @@ int factorial_rcursive (int a) {
        // the recursive case is when a is greater than 1. In this case, the function calls itself with the argument a - 1 and multiplies the result by a. This continues until the base case is reached, at which point the recursion unwinds and the final result is returned.
     }
 }
+// another function that is used to calculate the power of a number using recursion
+int power(int base, int exponent) {
+    if (exponent == 0) {
+        return 1; // Base case: any number raised to the power of 0 is 1
+    } else {
+        return base * power(base, exponent - 1); // Recursive case
+    }
+}
 
 int main() {
     int num;
     printf("enter a number to calculate its factorial :");
-    scanf("%d",num);
+    scanf("%d", &num);
     int result =factorial(num);
     int result2=factorial_rcursive(num);
     printf("the factoriel of %d is : %d\n",num,result2);
