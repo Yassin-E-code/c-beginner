@@ -86,6 +86,7 @@ void printQueue(Queue* queue) {
 }
 // main function to test all of th the programme and its functions 
 int main() {
+    // trying if functions does function !
     Queue* queue = createQueue();
     enqueue(queue, 10);
     enqueue(queue, 20);
