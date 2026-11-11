@@ -6,6 +6,7 @@ void swap(int *a, int *b) {
     *a = *b;
     *b = temp;
 }
+// The main function demonstrates the use of the swap function. It initializes two integer variables, x and y, prints their values before the swap, calls the swap function with the addresses of x and y, and then prints their values after the swap to show that they have been successfully swapped.
 
 int main() {
     int x = 5, y = 10;
